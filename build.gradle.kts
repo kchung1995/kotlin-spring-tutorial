@@ -2,11 +2,19 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("plugin.jpa") version "1.6.21"
-    id("org.springframework.boot") version "2.7.1"
+    id("org.springframework.boot") version "2.7.7"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
     kotlin("plugin.allopen") version "1.6.21"
+}
+
+group = "com.example.spring-gradle-test"
+version = "0.0.1-SNAPSHOT"
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
 }
 
 tasks.withType<KotlinCompile> {
@@ -25,6 +33,11 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+tasks.test {
+    // Use the built-in JUnit support of Gradle.
+    useJUnitPlatform()
 }
 
 allOpen {
