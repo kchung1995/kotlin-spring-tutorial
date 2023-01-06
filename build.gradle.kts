@@ -7,6 +7,7 @@ plugins {
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
     kotlin("plugin.allopen") version "1.6.21"
+    kotlin("kapt") version "1.6.21"
 }
 
 group = "com.example.spring-gradle-test"
@@ -40,6 +41,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("com.ninja-squad:springmockk:3.0.1")
+    implementation("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.test {
