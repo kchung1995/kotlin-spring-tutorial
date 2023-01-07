@@ -17,7 +17,7 @@ class BlogConfiguration {
             articleRepository.save(
                 Article(
                     title = "Reactor Bismuth is out",
-                    headline = "Lorem Ipsum",
+                    headline = "Lorem ipsum",
                     content = "dololr sit amet",
                     author = smaldini
 
@@ -26,7 +26,7 @@ class BlogConfiguration {
             articleRepository.save(
                 Article(
                     title = "Reactor Aluminium has landed",
-                    headline = "Lorem Ipsum",
+                    headline = "Lorem ipsum",
                     content = "dolor sit amet",
                     author = smaldini
                 )

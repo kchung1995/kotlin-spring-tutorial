@@ -33,7 +33,7 @@ class IntegrationTests(@Autowired val restTemplate: TestRestTemplate) {
         val entity = restTemplate.getForEntity<String>("/article/${title.toSlug()}")
 
         assertThat(entity.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(entity.body).contains(title, "Lorem ipsum", "dolor sitamet")
+        assertThat(entity.body).contains(title, "Lorem ipsum", "dolor sit amet")
     }
 
     @AfterAll
